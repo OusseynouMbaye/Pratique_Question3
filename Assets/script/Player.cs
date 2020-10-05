@@ -7,7 +7,7 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     Rigidbody2D my_rigidbody;
     float playerSpeed = 400.0f;
-    private GameObject player;
+   
     void Start()
     {
         my_rigidbody = gameObject.GetComponent<Rigidbody2D>();
@@ -22,6 +22,7 @@ public class Player : MonoBehaviour
        // float inputFire  = Input.GetAxis("Fire");
 
         if (inputVertical !=0) {
+
             my_rigidbody.MovePosition(new Vector2(my_rigidbody.transform.position.x, Mathf.Clamp( my_rigidbody.transform.position.y + inputVertical ,-4.3f,4.3f)));
         
         }
