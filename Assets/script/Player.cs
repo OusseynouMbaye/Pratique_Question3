@@ -22,7 +22,7 @@ public class Player : MonoBehaviour
        // float inputFire  = Input.GetAxis("Fire");
 
         if (inputVertical !=0) {
-            my_rigidbody.MovePosition(new Vector2(my_rigidbody.transform.position.x, my_rigidbody.transform.position.y + inputVertical));
+            my_rigidbody.MovePosition(new Vector2(my_rigidbody.transform.position.x, Mathf.Clamp( my_rigidbody.transform.position.y + inputVertical ,-4.3f,4.3f)));
         
         }
 
@@ -35,4 +35,5 @@ public class Player : MonoBehaviour
     {
 
     }
+  
 }
